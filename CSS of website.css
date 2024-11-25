@@ -1,0 +1,671 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'display', monospace;
+  background: url('https://assets.onecompiler.app/42yxwse34/42yxwrwuz/Untitled%20design%20(1).png') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 100, 100, 0.7);
+  z-index: -1;
+}
+
+/* Header Section */
+header {
+  background-color: rgb(255,192,203);
+  color: black;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: #ffb6c1;
+}
+
+/* Hero Section Styling */
+#hero {
+  height: 100vh;
+  width: 100%; 
+  background: url('background.jpg') no-repeat center center/cover; /* Replace 'background.jpg' with your image file */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; 
+  text-align: center;
+  padding: 0 1rem; 
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: Monaco, monospace; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: Monaco, monospace; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+}
+
+.hero-content .btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #ffb6c1;
+  color: black;
+  font-size: 1rem;
+  font-family: Monaco, monospace;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero-content .btn:hover {
+  background-color: #ffc0cb;
+  transform: scale(1.05);
+}
+
+/* Optional Media Query: Adjusts text size for smaller screens */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* General About Me Styling */
+#about-me {
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #ffc0cb, #ffb6c1); 
+  color: #444;
+}
+
+#about-me h2 {
+  font-size: 2.5rem;
+  color: #ff69b4; 
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-content {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fffaf0; 
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.section-divider {
+  border: 1px solid #ffb6c1;
+  margin-top: 1.5rem;
+}
+
+/* Personal Information Section */
+.personal-info {
+  text-align: left; 
+  padding: 2rem;
+  background-color: #fffaf0; 
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.personal-info h3 {
+  font-size: 2rem;
+  color: #ff69b4; 
+  margin-bottom: 1rem;
+}
+
+.info-item {
+  margin: 1rem 0;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #ff69b4; 
+}
+
+.info-value {
+  margin-left: 0.5rem;
+  color: #444; 
+}
+
+.characteristics-section h2 {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.characteristics-section p,
+.characteristics-section ul li {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+.characteristics-section {
+  background-image: url('https://assets.onecompiler.app/42yxwse34/42yxwrwuz/Untitled%20design%20(1).jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  color: white; 
+  padding: 40px;
+  text-align: center;
+}
+
+
+/* Favorite Colors Section */
+.color-circles {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.pink {
+  background-color: #ff69b4;
+}
+
+.black {
+  background-color: #000;
+}
+
+/* Cats */
+.cats-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cats-gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; 
+  border-radius: 50%; 
+  background-color: #ccc; 
+}
+ 
+
+/* K-Drama and Anime Tables */
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 1rem;
+  border: 1px solid #ffb6c1;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ff69b4;
+}
+
+/* Singing and Songwriting Section */
+#singing-songwriting {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#singing-songwriting h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff4d88;
+  margin-bottom: 30px;
+}
+
+.media-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px 0;
+}
+
+.video-section h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.video-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.video-container iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+}
+/* Audio Section */
+.audio-section {
+  padding: 2rem;
+  background: linear-gradient(to right, #ffc0cb, #ffb6c1);
+  color: #444;
+  text-align: center;
+}
+
+.audio-section h3 {
+  font-size: 2rem;
+  color: #ff69b4;
+  margin-bottom: 1.5rem;
+}
+
+.audio-container h4 {
+  font-size: 1.5rem;
+  color: black; /* Changed to black */
+  margin-bottom: 1rem;
+}
+
+.audio-btn {
+  background-color: #ffb6c1;
+  color: black;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+}
+
+.audio-btn:hover {
+  background-color: #ffc0cb;
+  transform: scale(1.05);
+}
+
+.audio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  border: 2px solid #ff69b4; 
+  padding: 1.5rem;
+  border-radius: 10px; 
+  background-color: white; 
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .audio-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+
+/* Table Tennis */
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .video-container {
+    flex: 1;
+  }
+
+  .sports-description {
+    flex: 1;
+    font-family: 'Courier', sans-serif;
+    font-size: 20px;
+    color: #333;
+    text-align: left; 
+    padding: 5px;  
+    margin-left: 5px;  
+  }
+
+  .sports-description p {
+    margin: 0;
+  }
+
+
+
+/* Student Leader Section Styling */
+#student-leader {
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #ffb6c1, #ffc0cb); 
+  color: #444;
+}
+
+#student-leader h2 {
+  font-size: 2.5rem;
+  color: #ff69b4; 
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#student-leader .section-content {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fffaf0; 
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#student-leader .leader-images {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 1rem; 
+  margin-top: 1.5rem;
+}
+
+#student-leader .leader-images img {
+  width: 250px; 
+  height: 250px; 
+  object-fit: cover;
+  border-radius: 10px;
+  border: 5px solid #ff69b4; 
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+#student-leader .leader-images img:hover {
+  transform: scale(1.1);
+  border-color: #ffc0cb; /* Border color changes on hover */
+}
+
+/* Achievements Section */
+#achievements {
+  text-align: center;
+  padding: 40px 20px;
+  background-image: url('https://assets.onecompiler.app/42yxwse34/42yxwrwuz/Untitled%20design%20(3).jpg'); /* Add your image URL here */
+  background-size: cover; /* Ensures the background covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+}
+
+#achievements h3 {
+  font-family: 'Monaco', sans-serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.achievements-text {
+  font-family: 'Courier', sans-serif;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.achievements-text h4 {
+  font-size: 22px;
+  color: #333;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.achievements-text ul {
+  text-align: left;
+  margin: 0 auto;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.achievements-text li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid #ffc0cb; 
+}
+
+.section-divider {
+  margin: 30px 0;
+  border: 1px solid #ddd;
+}
+
+
+
+/* Family and Friends Section */
+.family-gallery {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.family-column {
+  text-align: center;
+}
+
+.family-img {
+  width: 150px;
+  height: 150px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+
+.family-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #fffaf0; 
+}
+
+.family-section h3 {
+  font-family: 'Arial', sans-serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.family-collage {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-auto-rows: 1fr; 
+  gap: 20px; 
+  max-width: 90%; 
+  margin: 0 auto; 
+}
+
+.family-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border: 5px solid #ffc0cb;
+  border-radius: 10px; 
+  transition: transform 0.3s ease;
+}
+
+.family-img img:hover {
+  transform: scale(1.1); 
+}
+
+.section-divider {
+  margin: 30px 0;
+  border: 1px solid #ddd;
+}
+
+
+
+
+
+/* Final Note Section */
+.motto {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #ff69b4; 
+  margin-top: 1rem;
+  text-align: center;
+  animation: fade-in 2s ease-in-out;
+}
+
+/* Final Note Section */
+#final-note {
+  background-color: #ffe4e1; 
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.motto {
+  font-size: 1.7rem;
+  font-style: italic;
+  color: #ff69b4;
+  animation: fade-in 2s ease-in-out;
+}
+
+/* Contact Section */
+
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 2rem;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  margin-bottom: 1rem;
+}
+
+#contact .btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #ffb6c1;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#contact .btn:hover {
+  background-color: #ffc0cb;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(51, 51, 51, 0.9);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+/* Contact Section Styling */
+/* Contact Section Styling */
+#contact {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 182, 193, 0.7));
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#contact p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-icons .icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.contact-icons .icon img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.contact-icons .icon img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Copy Notice Styling */
+#copy-notice {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
